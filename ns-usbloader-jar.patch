@@ -1,0 +1,35 @@
+--- ns-usbloader-7.0/pom.xml.old	2023-10-23 20:50:17.527817159 +0200
++++ ns-usbloader-7.0/pom.xml	2023-10-23 20:50:44.315301194 +0200
+@@ -48,7 +48,6 @@
+ 
+     <properties>
+         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-        <maven.build.timestamp.format>yyyyMMdd.HHmmss</maven.build.timestamp.format>
+         <javafx.version>19.0.2.1</javafx.version>
+         <maven.compiler.release>11</maven.compiler.release>
+     </properties>
+@@ -166,7 +165,7 @@
+         </dependency>
+     </dependencies>
+     <build>
+-        <finalName>${project.artifactId}-${project.version}-${maven.build.timestamp}</finalName>
++        <finalName>${project.artifactId}</finalName>
+         <resources>
+             <resource>
+                 <directory>src/main/resources</directory>
+@@ -268,7 +267,7 @@
+                             <headerType>gui</headerType>
+                             <icon>appicon.ico</icon>
+                             <outfile>target/${project.name}.exe</outfile>
+-                            <jar>target/${project.artifactId}-${project.version}-${maven.build.timestamp}.jar</jar>
++                            <jar>target/${project.artifactId}.jar</jar>
+                             <!-- <downloadUrl>https://download.oracle.com/java/17/archive/jdk-17.0.1_windows-x64_bin.msi</downloadUrl> -->
+                             <errTitle>Launching error</errTitle>
+                             <!-- <dontWrapJar>true</dontWrapJar> -->
+@@ -300,4 +299,4 @@
+             </plugin>
+         </plugins>
+     </build>
+-</project>
+\ No newline at end of file
++</project>

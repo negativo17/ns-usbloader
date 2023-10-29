@@ -1,0 +1,13 @@
+--- ns-usbloader-7.0/misc/freedesktop_entry/ns-usbloader.desktop.old	2023-10-24 20:35:06.426349363 +0200
++++ ns-usbloader-7.0/misc/freedesktop_entry/ns-usbloader.desktop	2023-10-24 20:35:20.486598775 +0200
+@@ -1,9 +1,8 @@
+-#!/usr/bin/env xdg-open
+ [Desktop Entry]
+ Type=Application
+ Name=NS-USBloader
+ Exec=ns-usbloader
+ Comment=NS multi tool
+ Terminal=false
+-Icon=ns-usbloader.svg
++Icon=ns-usbloader
+ Categories=Game;
