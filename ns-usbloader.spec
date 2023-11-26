@@ -19,6 +19,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  java-devel
 BuildRequires:  libappstream-glib
 BuildRequires:  maven
+BuildRequires:  systemd-rpm-macros
 
 Requires:       jre-headless
 
@@ -49,6 +50,7 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.svg
 %{_javadir}/%{name}
+%{_udevrulesdir}/99-%{name}.rules
 
 %changelog
 * Sun Oct 22 2023 Simone Caronni <negativo17@gmail.com> - 7.0-1
