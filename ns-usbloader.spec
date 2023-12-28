@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           ns-usbloader
-Version:        7.0
+Version:        7.1
 Release:        1%{?dist}
 Summary:        Multi use tool for managing your Switch
 License:        GPL-3.0-or-later
@@ -53,5 +53,8 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_udevrulesdir}/99-%{name}.rules
 
 %changelog
+* Thu Dec 28 2023 Simone Caronni <negativo17@gmail.com> - 7.1-1
+- Update to 7.1.
+
 * Sun Oct 22 2023 Simone Caronni <negativo17@gmail.com> - 7.0-1
 - First build.
