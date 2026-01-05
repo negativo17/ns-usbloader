@@ -1,5 +1,6 @@
---- ns-usbloader-7.0/misc/freedesktop_entry/ns-usbloader.desktop.old	2023-10-24 20:35:06.426349363 +0200
-+++ ns-usbloader-7.0/misc/freedesktop_entry/ns-usbloader.desktop	2023-10-24 20:35:20.486598775 +0200
+diff -Naur ns-usbloader-7.3.old/misc/freedesktop_entry/ns-usbloader.desktop ns-usbloader-7.3/misc/freedesktop_entry/ns-usbloader.desktop
+--- ns-usbloader-7.3.old/misc/freedesktop_entry/ns-usbloader.desktop	2026-01-05 09:26:41.102297571 +0100
++++ ns-usbloader-7.3/misc/freedesktop_entry/ns-usbloader.desktop	2026-01-05 09:27:36.091241745 +0100
 @@ -1,9 +1,8 @@
 -#!/usr/bin/env xdg-open
  [Desktop Entry]
