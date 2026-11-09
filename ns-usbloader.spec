@@ -16,12 +16,12 @@ Patch0:         %{name}-jar.patch
 Patch1:         %{name}-desktop.patch
 
 BuildRequires:  desktop-file-utils
-BuildRequires:  java-devel
+BuildRequires:  java-25-openjdk-devel
 BuildRequires:  libappstream-glib
 BuildRequires:  maven
 BuildRequires:  systemd-rpm-macros
 
-Requires:       jre-headless
+Requires:       java-25-openjdk-headless
 
 %description
 NS-USBloader is an Awoo Installer and GoldLeaf uploader of the NSPs (and other
@@ -31,6 +31,8 @@ files), RCM payload injector, application for split/merge files.
 %autosetup -p1
 
 %build
+# Maven otherwise runs with the default JDK, which can be older
+export JAVA_HOME=%{_prefix}/lib/jvm/java-25-openjdk
 mvn -B -DskipTests clean package
 
 %install
