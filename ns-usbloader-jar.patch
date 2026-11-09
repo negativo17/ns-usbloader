@@ -1,36 +1,29 @@
-diff -Naur ns-usbloader-7.3.old/pom.xml ns-usbloader-7.3/pom.xml
---- ns-usbloader-7.3.old/pom.xml	2026-01-05 09:26:41.103931712 +0100
-+++ ns-usbloader-7.3/pom.xml	2026-01-05 09:26:48.307458247 +0100
+diff -Naur ns-usbloader-7.4.old/pom.xml ns-usbloader-7.4/pom.xml
+--- ns-usbloader-7.4.old/pom.xml	2026-11-09 08:13:56.716005194 +0100
++++ ns-usbloader-7.4/pom.xml	2026-11-09 08:15:44.951412147 +0100
 @@ -48,7 +48,6 @@
  
      <properties>
          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 -        <maven.build.timestamp.format>yyyyMMdd.HHmmss</maven.build.timestamp.format>
-         <javafx.version>19.0.2.1</javafx.version>
-         <maven.compiler.release>17</maven.compiler.release>
-     </properties>
-@@ -166,7 +165,7 @@
-         </dependency>
+         <javafx.version>25</javafx.version>
+         <maven.compiler.release>23</maven.compiler.release>
+         <!-- Build-variant switches (overridden by profiles) -->
+@@ -145,7 +144,7 @@
      </dependencies>
+ 
      <build>
--        <finalName>${project.artifactId}-${project.version}-${maven.build.timestamp}</finalName>
+-        <finalName>${project.artifactId}-${project.version}${finalNameSuffix}</finalName>
 +        <finalName>${project.artifactId}</finalName>
          <resources>
              <resource>
                  <directory>src/main/resources</directory>
-@@ -268,7 +267,7 @@
-                             <headerType>gui</headerType>
-                             <icon>appicon.ico</icon>
-                             <outfile>target/${project.name}.exe</outfile>
--                            <jar>target/${project.artifactId}-${project.version}-${maven.build.timestamp}.jar</jar>
-+                            <jar>target/${project.artifactId}.jar</jar>
-                             <!-- <downloadUrl>https://download.oracle.com/java/17/archive/jdk-17.0.1_windows-x64_bin.msi</downloadUrl> -->
-                             <errTitle>Launching error</errTitle>
-                             <!-- <dontWrapJar>true</dontWrapJar> -->
-@@ -300,4 +299,4 @@
-             </plugin>
-         </plugins>
-     </build>
--</project>
-\ No newline at end of file
-+</project>
+@@ -325,7 +324,7 @@
+                                     <headerType>gui</headerType>
+                                     <icon>appicon.ico</icon>
+                                     <outfile>target/${project.name}.exe</outfile>
+-                                    <jar>target/${project.artifactId}-${project.version}${finalNameSuffix}.jar</jar>
++                                    <jar>target/${project.artifactId}.jar</jar>
+ 
+                                     <errTitle>Launching error</errTitle>
+                                     <jre>
